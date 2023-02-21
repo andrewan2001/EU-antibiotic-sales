@@ -167,7 +167,7 @@ France$Antibiotic <- France$`Antibiotic sales (tonnes)`
 Germany$Antibiotic <- Germany$`Antibiotic sales (tonnes)`
 Italy$Antibiotic <- Italy$`Antibiotic sales (tonnes)`
 Netherlands$Antibiotic <- Netherlands$`Antibiotic sales (tonnes)`
-Poland$Antibiotic<-Poland$'Antibiotic sales (tonnes)'
+Poland$Antibiotic<-Poland$`Antibiotic sales (tonnes)`
 Spain$Antibiotic <- Spain$`Antibiotic sales (tonnes)`
 UK$Antibiotic <- UK$`Antibiotic sales (tonnes)`
 
