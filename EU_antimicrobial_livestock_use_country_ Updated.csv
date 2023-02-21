@@ -1,0 +1,350 @@
+Country,Antibiotic sales (tonnes),Year
+Austria,62.83,2010
+Belgium,300.55,2010
+Czech Republic,72.06,2010
+Denmark,118.93,2010
+Estonia,7.78,2010
+Finland,13.66,2010
+France,1014.24,2010
+Hungary,210.68,2010
+Iceland,0.79,2010
+Ireland,92.21,2010
+Italy,1933.45,2010
+Latvia,6.55,2010
+Norway,6.84,2010
+Portugal,181.76,2010
+Slovenia,8.81,2010
+Sweden,13.77,2010
+United Kingdom,468.82,2010
+Total,4513.74,2010
+Austria,53.44,2011
+Belgium,298.79,2011
+Bulgaria,36.99,2011
+Cyprus,51.78,2011
+Czech Republic,61.56,2011
+Denmark,105.43,2011
+Estonia,7.66,2011
+Finland,13.49,2011
+France,907.72,2011
+Germany,1826.49,2011
+Hungary,147.66,2011
+Iceland,0.7,2011
+Ireland,83.32,2011
+Italy,1677.59,2011
+Latvia,6.31,2011
+Lithuania,13.93,2011
+Netherlands,363.58,2011
+Norway,6.66,2011
+Poland,501.75,2011
+Portugal,164.78,2011
+Slovakia,10.96,2011
+Slovenia,8.74,2011
+Spain,2393.07,2011
+Sweden,12.29,2011
+United Kingdom,357.29,2011
+Total,9111.97,2011
+Austria,53.22,2012
+Belgium,272.27,2012
+Bulgaria,38.49,2012
+Cyprus,45.01,2012
+Czech Republic,54.3,2012
+Denmark,106.95,2012
+Estonia,7.47,2012
+Finland,13.15,2012
+France,778.88,2012
+Germany,1715.37,2012
+Hungary,178.84,2012
+Iceland,0.64,2012
+Ireland,96.02,2012
+Italy,1543.32,2012
+Latvia,6.77,2012
+Lithuania,13.34,2012
+Luxembourg,2.29,2012
+Netherlands,246.62,2012
+Norway,7.58,2012
+Poland,530.2,2012
+Portugal,156.58,2012
+Slovakia,10.36,2012
+Slovenia,7.2,2012
+Spain,2117.38,2012
+Sweden,11.38,2012
+United Kingdom,463.81,2012
+Total,8477.44,2012
+Austria,54.99,2013
+Belgium,261.24,2013
+Bulgaria,46.66,2013
+Cyprus,47.95,2013
+Czech Republic,58.22,2013
+Denmark,108.63,2013
+Estonia,8.64,2013
+Finland,13.43,2013
+France,696.89,2013
+Germany,1539.31,2013
+Hungary,176.23,2013
+Iceland,0.59,2013
+Ireland,99.05,2013
+Italy,1327.97,2013
+Latvia,6.36,2013
+Lithuania,9.94,2013
+Luxembourg,2.77,2013
+Netherlands,226.42,2013
+Norway,7.03,2013
+Poland,578.95,2013
+Portugal,179.83,2013
+Slovakia,14.79,2013
+Slovenia,4.4,2013
+Spain,2203.44,2013
+Sweden,10.76,2013
+United Kingdom,436.31,2013
+Total,8120.82,2013
+Austria,53.67,2014
+Belgium,267.53,2014
+Bulgaria,32.7,2014
+Croatia,31.95,2014
+Cyprus,41.78,2014
+Czech Republic,56.93,2014
+Denmark,106.71,2014
+Estonia,9.95,2014
+Finland,13.23,2014
+France,779.62,2014
+Germany,1313.77,2014
+Hungary,150.61,2014
+Iceland,0.58,2014
+Ireland,89.37,2014
+Italy,1332.06,2014
+Latvia,6.43,2014
+Lithuania,11.97,2014
+Luxembourg,2.18,2014
+Netherlands,217.52,2014
+Norway,6.27,2014
+Poland,581.26,2014
+Portugal,190.48,2014
+Romania,277.03,2014
+Slovakia,16.57,2014
+Slovenia,6.07,2014
+Spain,2965.5,2014
+Sweden,9.98,2014
+Switzerland,46.5,2014
+United Kingdom,447.82,2014
+Total,9066.04,2014
+Austria,48.78,2015
+Belgium,260.06,2015
+Bulgaria,46.79,2015
+Croatia,28.14,2015
+Cyprus,46.93,2015
+Czech Republic,48.58,2015
+Denmark,101.75,2015
+Estonia,8.18,2015
+Finland,12.26,2015
+France,513.82,2015
+Germany,860.74,2015
+Greece,73.07,2015
+Hungary,176.25,2015
+Iceland,0.58,2015
+Ireland,96.99,2015
+Italy,1309.67,2015
+Latvia,6.87,2015
+Lithuania,11.94,2015
+Luxembourg,1.94,2015
+Netherlands,216.54,2015
+Norway,5.94,2015
+Poland,584.82,2015
+Portugal,170.34,2015
+Romania,259.59,2015
+Slovakia,12.75,2015
+Slovenia,4.97,2015
+Spain,3029.77,2015
+Sweden,10.11,2015
+Switzerland,41.28,2015
+United Kingdom,408.14,2015
+Total,8397.61,2015
+Austria,44.41,2016
+Belgium,242.3,2016
+Bulgaria,61.14,2016
+Croatia,26.66,2016
+Cyprus,46.37,2016
+Czech Republic,44.33,2016
+Denmark,98.54,2016
+Estonia,7.35,2016
+Finland,11.18,2016
+France,529.37,2016
+Germany,787.87,2016
+Greece,80.56,2016
+Hungary,155.86,2016
+Iceland,0.57,2016
+Ireland,103.42,2016
+Italy,1223.36,2016
+Latvia,5.49,2016
+Lithuania,12.84,2016
+Luxembourg,2.06,2016
+Netherlands,184.74,2016
+Norway,5.87,2016
+Poland,572.99,2016
+Portugal,212.05,2016
+Romania,268.88,2016
+Slovakia,12.4,2016
+Slovenia,5.85,2016
+Spain,2726.54,2016
+Sweden,10.25,2016
+Switzerland,37.66,2016
+United Kingdom,295.59,2016
+Total,7816.5,2016
+Austria,45.25,2017
+Belgium,222.84,2017
+Bulgaria,49.74,2017
+Croatia,21.22,2017
+Cyprus,45.48,2017
+Czech Republic,45.11,2017
+Denmark,94.2,2017
+Estonia,6.42,2017
+Finland,11.03,2017
+France,498.06,2017
+Germany,775.42,2017
+Greece,116.76,2017
+Hungary,147.49,2017
+Iceland,0.59,2017
+Ireland,99.65,2017
+Italy,1067.67,2017
+Latvia,5.98,2017
+Lithuania,11.68,2017
+Luxembourg,2.02,2017
+Malta,2.02,2017
+Netherlands,190.89,2017
+Norway,6.02,2017
+Poland,751.58,2017
+Portugal,135.94,2017
+Romania,266.14,2017
+Slovakia,14.15,2017
+Slovenia,7.16,2017
+Spain,1770.41,2017
+Sweden,9.9,2017
+Switzerland,32.64,2017
+United Kingdom,248.17,2017
+Total,6701.59,2017
+Austria,48.63,2018
+Belgium,196.96,2018
+Bulgaria,47.96,2018
+Croatia,22.13,2018
+Cyprus,53.48,2018
+Czech Republic,41.17,2018
+Denmark,93.36,2018
+Estonia,6.21,2018
+Finland,10.34,2018
+France,471.41,2018
+Germany,762.66,2018
+Greece,113.56,2018
+Hungary,150.44,2018
+Iceland,0.61,2018
+Ireland,99.42,2018
+Italy,942.42,2018
+Latvia,6.12,2018
+Lithuania,10.79,2018
+Luxembourg,1.94,2018
+Malta,2.18,2018
+Netherlands,187.08,2018
+Poland,784.03,2018
+Portugal,193,2018
+Romania,234.47,2018
+Slovakia,12.43,2018
+Slovenia,8.2,2018
+Spain,1724.65,2018
+Sweden,10.2,2018
+Switzerland,33.61,2018
+United Kingdom,226.15,2018
+Total,6495.61,2018
+ Austria ,41,2019
+ Belgium ,177,2019
+ Bulgaria ,44,2019
+ Croatia ,20,2019
+ Cyprus ,49,2019
+ Czech Republic ,39,2019
+ Denmark ,88,2019
+ Estonia ,6,2019
+ Finland ,10,2019
+ France ,423,2019
+ Germany ,664,2019
+ Greece ,100,2019
+ Hungary ,152,2019
+ Iceland ,1,2019
+ Ireland ,88,2019
+ Italy ,740,2019
+ Latvia ,5,2019
+ Lithuania ,7,2019
+ Luxembourg ,2,2019
+ Malta ,2,2019
+ Netherlands ,156,2019
+ Norway ,5,2019
+ Poland ,844,2019
+ Portugal ,150,2019
+ Romania ,174,2019
+ Slovakia ,11,2019
+ Slovenia ,8,2019
+ Spain ,1008,2019
+ Sweden ,9,2019
+ Switzerland ,30,2019
+ United Kingdom ,229,2019
+ Total ,5282,2019
+ Austria ,44.27,2020
+ Belgium ,182.61,2020
+ Bulgaria ,44.64,2020
+ Croatia ,22.72,2020
+ Cyprus ,48.32,2020
+ Czech Republic ,40.45,2020
+ Denmark ,89.51,2020
+ Estonia ,5.86,2020
+ Finland ,8.93,2020
+ France ,410.91,2020
+ Germany ,695.36,2020
+ Greece ,108.85,2020
+ Hungary ,136.43,2020
+ Iceland ,0.57,2020
+ Ireland ,103.9,2020
+ Italy ,696.65,2020
+ Latvia ,4.77,2020
+ Lithuania ,6.29,2020
+ Luxembourg ,1.68,2020
+ Malta ,1.79,2020
+ Netherlands ,159.32,2020
+ Norway ,5.06,2020
+ Poland ,856.68,2020
+ Portugal ,179.06,2020
+ Romania ,177.9,2020
+ Slovakia ,12.16,2020
+ Slovenia ,6.31,2020
+ Spain ,1246.23,2020
+ Sweden ,9.41,2020
+ Switzerland ,28.35,2020
+ United Kingdom,226.71,2020
+ Total ,5561.7,2020
+ Austria,39.68,2021
+ Belgium ,171.01,2021
+ Bulgaria ,48.85,2021
+ Croatia ,20.9,2021
+ Cyprus ,45.14,2021
+ Czech Republic ,36.64,2021
+ Denmark ,82.62,2021
+ Estonia ,5.51,2021
+ Finland ,9.38,2021
+ France ,367.27,2021
+ Germany ,602.15,2021
+ Greece ,120.2,2021
+ Hungary ,132.19,2021
+ Iceland ,0.57,2021
+ Ireland ,94.22,2021
+ Italy ,669.13,2021
+ Latvia ,4.03,2021
+ Lithuania ,6.1,2021
+ Luxembourg ,1.61,2021
+ Malta ,1.74,2021
+ Netherlands ,150.5,2021
+ Norway ,5.83,2021
+ Poland ,778.74,2021
+ Portugal ,160.65,2021
+ Romania ,177.67,2021
+ Slovakia ,10.02,2021
+ Slovenia ,6.31,2021
+ Spain ,1298.74,2021
+ Sweden ,9.27,2021
+ Switzerland ,26.68,2021
+ United Kingdom ,212.43,2021
+ Total ,5295.8,2021
