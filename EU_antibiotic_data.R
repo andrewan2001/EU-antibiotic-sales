@@ -162,55 +162,5 @@ ggplot(EU_big_users300_cleaned, aes(x=Year, y =  `Antibiotic sales (tonnes)`, fi
   scale_x_continuous(limits = c(2009,2022),breaks=c(2010,2012,2014,2016,2018,2020)) +
   labs(title = "Livestock antibiotic sale in EU, 2010 - 2021", y = "Antibiotic sale, tonnes")
 
-#Conversion to single word variable for ease
-Belgium$Antibiotic<- Belgium$`Antibiotic sales (tonnes)`
-France$Antibiotic <- France$`Antibiotic sales (tonnes)`
-Germany$Antibiotic <- Germany$`Antibiotic sales (tonnes)`
-Italy$Antibiotic <- Italy$`Antibiotic sales (tonnes)`
-Netherlands$Antibiotic <- Netherlands$`Antibiotic sales (tonnes)`
-Poland$Antibiotic<-Poland$`Antibiotic sales (tonnes)`
-Spain$Antibiotic <- Spain$`Antibiotic sales (tonnes)`
-UK$Antibiotic <- UK$`Antibiotic sales (tonnes)`
-
-#Plotting by country - Top 8
-ggplot(data=Belgium, aes(x=Year, y = Antibiotic)) + geom_col(fill = "green2") +
-  scale_x_continuous(breaks=c(2010,2011,2012,2013,2014,2015,2016,2017,2018,2020)) +
-  labs(title = "Livestock antibiotic sale in Belgium, 2011 - 2018", y = "Antibiotic sale, tonnes") +
-  theme(plot.title = element_text(size = 30), axis.title = element_text(size=18))
-
-ggplot(data=France, aes(x=Year, y = Antibiotic)) + geom_col(fill = "blue4") +
-  scale_x_continuous(breaks=c(2010,2011,2012,2013,2014,2015,2016,2017,2018,2020))  +
-  labs(title = "Livestock antibiotic sale in France, 2011 - 2018", y = "Antibiotic sale, tonnes")+ 
-  theme(plot.title = element_text(size = 30), axis.title = element_text(size=18))
-
-ggplot(data=Germany, aes(x=Year, y = Antibiotic)) + geom_col(fill = "goldenrod") +
-  scale_x_continuous(breaks=c(2011,2012,2013,2014,2015,2016,2017,2018,2020)) +
-  labs(title = "Livestock antibiotic sale in Germany, 2011 - 2018", y = "Antibiotic sale, tonnes") +
-  theme(plot.title = element_text(size = 30), axis.title = element_text(size=18))
-
-ggplot(data=Netherlands, aes(x=Year, y = Antibiotic)) + geom_col(fill = "darkorchid3") +
-  scale_x_continuous(breaks=c(2011,2012,2013,2014,2015,2016,2017,2018,2020)) +
-  labs(title = "Livestock antibiotic sale in the Netherlands, 2011 - 2018", y = "Antibiotic sale, tonnes") +
-  theme(plot.title = element_text(size = 30), axis.title = element_text(size=18))
-
-ggplot(data=Spain, aes(x=Year, y = Antibiotic)) + geom_col(fill = "deeppink") +
-  scale_x_continuous(breaks=c(2011,2012,2013,2014,2015,2016,2017,2018,2020)) +
-  labs(title = "Livestock antibiotic sale in Spain, 2011 - 2018", y = "Antibiotic sale, tonnes") +
-  theme(plot.title = element_text(size = 30), axis.title = element_text(size=18))
-
-ggplot(data=UK, aes(x=Year, y = Antibiotic)) + geom_col(fill = "brown") +
-  scale_x_continuous(breaks=c(2010,2011,2012,2013,2014,2015,2016,2017,2018,2020)) +
-  labs(title = "Livestock antibiotic sale in the UK, 2010 - 2018", y = "Antibiotic sale, tonnes") +
-  theme(plot.title = element_text(size = 30), axis.title = element_text(size=18))
-
-ggplot(data=Italy, aes(x=Year, y = Antibiotic)) + geom_col(fill = "forestgreen") +
-  scale_x_continuous(breaks=c(2010,2011,2012,2013,2014,2015,2016,2017,2018,2020)) +
-  labs(title = "Livestock antibiotic sale in Italy, 2010 - 2018", y = "Antibiotic sale, tonnes") +
-  theme(plot.title = element_text(size = 30), axis.title = element_text(size=18))
-
-ggplot(data=Poland, aes(x=Year, y = Antibiotic)) + geom_col(fill = "cyan2") +
-  scale_x_continuous(breaks=c(2011,2012,2013,2014,2015,2016,2017,2018,2020)) +
-  labs(title = "Livestock antibiotic sale in Poland, 2011 - 2018", y = "Antibiotic sale, tonnes") +
-  theme(plot.title = element_text(size = 30), axis.title = element_text(size=18))
 
 
