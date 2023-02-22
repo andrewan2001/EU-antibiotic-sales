@@ -13,8 +13,8 @@ library(tidyverse)
 library(tidyselect)
 library(rmarkdown)
 library(rstudioapi)
-library(ggplot2)
 library(ggformula)
+library(ggplot2)
 library(ggforce)
 library(readr)
 
@@ -77,48 +77,40 @@ ggplot(EU_antimicrobial_livestock_use_country_, aes(x=Year, y=`Antibiotic sales 
   geom_col()+facet_wrap(~Country, scales="free")
 
 #Plotting Big buyer, although filtering out entries <100 tonnes)
-ggplot(Big_user, aes(x=Year, y =  `Antibiotic sales (tonnes)`, color=Country)) +
-  geom_col() + facet_wrap(~Country,scales="free")+
-  scale_x_continuous(breaks=c(2010,2012,2014,2016,2018,2020))+
-  labs(title = "Livestock antibiotic sale in EU, 2010 - 2021", y = "Antibiotic sale, tonnes")
+
+  #Plot function
+CountryPlot <- function(x,y){
+  ggplot(x, aes(x=Year, y =  `Antibiotic sales (tonnes)`, fill =Country)) +
+    geom_col() + facet_wrap(~Country,scales=y)+
+    scale_x_continuous(limits=c(2009,2022), breaks=c(2010,2012,2014,2016,2018,2020))+
+    labs(title = "Livestock antibiotic sale in EU, 2010 - 2021", y = "Antibiotic sale, tonnes")
+}
+
+#Plotting Big Buyers
+CountryPlot(Big_user,"free")
+
 
 #Plotting all EU countries w/o total
 Only_EU_Countries<- filter(EU_antimicrobial_livestock_use_country_, Country != "Total")
 Only_EU_Countries
 
 #Plotting all EU countries with free, relative scaling of y-axis
-ggplot(Only_EU_Countries, aes(x=Year, y =  `Antibiotic sales (tonnes)`, fill=Country)) + 
-  geom_col() + facet_wrap(~Country,scales="free") + 
-  scale_x_continuous(limits=c(2009,2022)) + 
-  labs(title = "Livestock antibiotic sale in EU, 2010 - 2021", y = "Antibiotic sale, tonnes")
+
+CountryPlot(Only_EU_Countries, "free")
 
 #Plotting with rigid scale of y-axis (same scale for all countries)
-ggplot(Only_EU_Countries, aes(x=Year, y =  `Antibiotic sales (tonnes)`, fill=Country)) + 
-  geom_col() + facet_wrap(~Country)+ scale_x_continuous(limits=c(2009,2022)) + 
-  labs(title = "Livestock antibiotic sale in EU, 2010 - 2021", y = "Antibiotic sale, tonnes")
+CountryPlot(Only_EU_Countries, "fixed")
 
-#Identifying countries with sale of 100 or more tonnes of antibiotics at any time
+#Indexing countries with sale of 100 or more tonnes of antibiotics at any time
 EU_big_users_cleaned<-Only_EU_Countries[Only_EU_Countries$Country %in% Big_user_country, ]
 
 #Plotting big buyers (>100 tonnes)
 
   #Plotting with fixed scale (>100)
-ggplot(EU_big_users_cleaned, aes(x=Year, y =  `Antibiotic sales (tonnes)`, fill=Country)) +
-  geom_col() + facet_wrap(~Country) + 
-  scale_x_continuous(limits = c(2009,2022),breaks=c(2010,2012,2014,2016,2018,2020)) + 
-  labs(title = "Livestock antibiotic sale in EU, 2010 - 2021", y = "Antibiotic sale, tonnes")
+CountryPlot(EU_big_users_cleaned, "fixed")
 
   #Plotting with free scale (>100)
-ggplot(EU_big_users_cleaned, aes(x=Year, y =  `Antibiotic sales (tonnes)`, fill=Country)) +
-  geom_col() + facet_wrap(~Country, scale = "free") +
-  scale_x_continuous(limits = c(2009,2022),breaks=c(2010,2012,2014,2016,2018,2020)) +
-  labs(title = "Livestock antibiotic sale in EU, 2010 - 2021", y = "Antibiotic sale, tonnes")
-
-  #Plotting with fill color for aesthetics
-ggplot(EU_big_users_cleaned, aes(x=Year, y =  `Antibiotic sales (tonnes)`, fill=Country)) +
-  geom_col() + facet_wrap(~Country, scale = "free") + 
-  scale_x_continuous(limits = c(2009,2022),breaks=c(2010,2012,2014,2016,2018,2020)) + 
-  labs(title = "Livestock antibiotic sale in EU, 2010 - 2021", y = "Antibiotic sale, tonnes")
+CountryPlot(EU_big_users_cleaned, "free")
 
 #Determining Top buyers > 200 tonnes
 Big_user200 <- filter(Only_EU_Countries, `Antibiotic sales (tonnes)` > 200)
@@ -130,16 +122,10 @@ Big_user_200country
 EU_big_users200_cleaned<-Only_EU_Countries[Only_EU_Countries$Country %in% Big_user_200country, ]
 
   #Free scale plotting >200 tonnes buyers
-ggplot(EU_big_users200_cleaned, aes(x=Year, y =  `Antibiotic sales (tonnes)`, fill=Country)) +
-  geom_col() + facet_wrap(~Country, scale = "free") + 
-  scale_x_continuous(limits = c(2009,2022),breaks=c(2010,2012,2014,2016,2018,2020)) +
-  labs(title = "Livestock antibiotic sale in EU, 2010 - 2021", y = "Antibiotic sale, tonnes")
+CountryPlot(EU_big_users200_cleaned, "free")
 
   #Fixed scale
-ggplot(EU_big_users200_cleaned, aes(x=Year, y =  `Antibiotic sales (tonnes)`, fill=Country)) +
-  geom_col() + facet_wrap(~Country) + 
-  scale_x_continuous(limits = c(2009,2022),breaks=c(2010,2012,2014,2016,2018,2020)) +
-  labs(title = "Livestock antibiotic sale in EU, 2010 - 2021", y = "Antibiotic sale, tonnes")
+CountryPlot(EU_big_users200_cleaned, "fixed")
 
 #Determining Top buyers (>300 tonnes of antibiotics)
 Big_user300 <- filter(Only_EU_Countries, `Antibiotic sales (tonnes)` > 300)
@@ -151,16 +137,7 @@ Big_user_300country
 EU_big_users300_cleaned<-Only_EU_Countries[Only_EU_Countries$Country %in% Big_user_300country, ]
 
   #Plotting Top 8 buyers, free scale
-ggplot(EU_big_users300_cleaned, aes(x=Year, y =  `Antibiotic sales (tonnes)`, fill=Country)) +
-  geom_col() + facet_wrap(~Country, scale = "free") +
-  scale_x_continuous(limits = c(2009,2022),breaks=c(2010,2012,2014,2016,2018,2020)) +
-  labs(title = "Livestock antibiotic sale in EU, 2010 - 2021", y = "Antibiotic sale, tonnes")
+CountryPlot(EU_big_users300_cleaned, "free")
 
   #Plotting Top 8 buyers, fixed scale
-ggplot(EU_big_users300_cleaned, aes(x=Year, y =  `Antibiotic sales (tonnes)`, fill=Country)) +
-  geom_col() + facet_wrap(~Country) +
-  scale_x_continuous(limits = c(2009,2022),breaks=c(2010,2012,2014,2016,2018,2020)) +
-  labs(title = "Livestock antibiotic sale in EU, 2010 - 2021", y = "Antibiotic sale, tonnes")
-
-
-
+CountryPlot(EU_big_users300_cleaned, "fixed")
