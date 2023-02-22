@@ -20,48 +20,12 @@ library(readr)
 
 EU_antimicrobial_livestock_use_country_ <- read_csv("Documents/Job search/EU_antimicrobial_livestock_use_country_ Updated.csv")
 
-#Filtering antibiotic sale by individual country. 
-CountryFunc <- function(x){filter(EU_antimicrobial_livestock_use_country_, Country == x)}
-Austria <- CountryFunc("Austria")
-Belgium <- CountryFunc("Belgium")
-Croatia <- CountryFunc("Croatia")
-Cyprus <- CountryFunc("Cyprus")
-Czech <- CountryFunc("Czech Republic")
-Denmark <- CountryFunc("Denmark")
-Estonia <- CountryFunc("Estonia")
-Finland <- CountryFunc("Finland")
-Germany <- CountryFunc("Germany")
-France <- CountryFunc("France")
-Greece <- CountryFunc("Greece")
-Hungary <- CountryFunc("Hungary")
-Italy <- CountryFunc("Italy")
-Iceland <- CountryFunc("Iceland")
-Ireland <- CountryFunc("Ireland")
-Latvia <- CountryFunc("Latvia")
-Lithuania <- CountryFunc("Lithuania")
-Luxembourg <- CountryFunc("Luxembourg")
-Malta <- CountryFunc("Malta")
-Netherlands <- CountryFunc("Netherlands")
-Poland <-CountryFunc("Poland")
-Portugal <- CountryFunc("Portugal")
-Romania <- CountryFunc("Romania")
-Slovakia <- CountryFunc("Slovakia")
-Slovenia <- CountryFunc("Slovenia")
-Spain <- CountryFunc("Spain")
-Sweden <- CountryFunc("Sweden")
-Switzerland <- CountryFunc("Switzerland")
-UK <- CountryFunc("United Kingdom")
-
-#Initial Observation of data - checking on Europe's largest countries.
-
+#Initial Observation of data
 View(EU_antimicrobial_livestock_use_country_)
 
-View(France)
-View(Germany)
-View(Italy)
-View(Spain)
-View(UK)
-
+#Plotting all countries + total together
+ggplot(EU_antimicrobial_livestock_use_country_, aes(x=Year, y=`Antibiotic sales (tonnes)`,color=Country))+ 
+  geom_col()+facet_wrap(~Country, scales="free")
 
 #Identification of high-buyer countries (>100 tonnes of antibiotic sale)
 Big_user <- filter(EU_antimicrobial_livestock_use_country_, `Antibiotic sales (tonnes)` > 100)
@@ -70,11 +34,6 @@ Big_user$Country
 unique(Big_user$Country)
 Big_user_country <- unique(Big_user$Country)
 Big_user_country
-
-
-#Plotting all countries + total together
-ggplot(EU_antimicrobial_livestock_use_country_, aes(x=Year, y=`Antibiotic sales (tonnes)`,color=Country))+ 
-  geom_col()+facet_wrap(~Country, scales="free")
 
 #Plotting Big buyer, although filtering out entries <100 tonnes)
 
@@ -89,13 +48,11 @@ CountryPlot <- function(x,y){
 #Plotting Big Buyers
 CountryPlot(Big_user,"free")
 
-
 #Plotting all EU countries w/o total
 Only_EU_Countries<- filter(EU_antimicrobial_livestock_use_country_, Country != "Total")
 Only_EU_Countries
 
 #Plotting all EU countries with free, relative scaling of y-axis
-
 CountryPlot(Only_EU_Countries, "free")
 
 #Plotting with rigid scale of y-axis (same scale for all countries)
@@ -133,7 +90,7 @@ Big_user300
 Big_user_300country <- unique(Big_user300$Country)
 Big_user_300country
 
-  #Top 8 buyers identified
+  #Indexing for Top 8 Buyers data
 EU_big_users300_cleaned<-Only_EU_Countries[Only_EU_Countries$Country %in% Big_user_300country, ]
 
   #Plotting Top 8 buyers, free scale
