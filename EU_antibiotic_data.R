@@ -37,7 +37,7 @@ Big_user_country
 
 #Plotting Big buyer, although filtering out entries <100 tonnes)
 
-  #Plot function
+  #Plot function for antibiotic sales with years and labels set
 CountryPlot <- function(x,y){
   ggplot(x, aes(x=Year, y =  `Antibiotic sales (tonnes)`, fill =Country)) +
     geom_col() + facet_wrap(~Country,scales=y)+
@@ -48,14 +48,14 @@ CountryPlot <- function(x,y){
 #Plotting Big Buyers
 CountryPlot(Big_user,"free")
 
-#Plotting all EU countries w/o total
+#Removing Total sale of all European countries from data
 Only_EU_Countries<- filter(EU_antimicrobial_livestock_use_country_, Country != "Total")
 Only_EU_Countries
 
 #Plotting all EU countries with free, relative scaling of y-axis
 CountryPlot(Only_EU_Countries, "free")
 
-#Plotting with rigid scale of y-axis (same scale for all countries)
+  #Plotting with rigid scale of y-axis (same scale for all countries)
 CountryPlot(Only_EU_Countries, "fixed")
 
 #Indexing countries with sale of 100 or more tonnes of antibiotics at any time
@@ -64,10 +64,10 @@ EU_big_users_cleaned<-Only_EU_Countries[Only_EU_Countries$Country %in% Big_user_
 #Plotting big buyers (>100 tonnes)
 
   #Plotting with fixed scale (>100)
-CountryPlot(EU_big_users_cleaned, "fixed")
+  CountryPlot(EU_big_users_cleaned, "fixed")
 
   #Plotting with free scale (>100)
-CountryPlot(EU_big_users_cleaned, "free")
+  CountryPlot(EU_big_users_cleaned, "free")
 
 #Determining Top buyers > 200 tonnes
 Big_user200 <- filter(Only_EU_Countries, `Antibiotic sales (tonnes)` > 200)
@@ -76,13 +76,13 @@ Big_user_200country <- unique(Big_user200$Country)
 Big_user_200country
 
   #Filtering for any country that has ever bought >200 tonnes of antibiotics
-EU_big_users200_cleaned<-Only_EU_Countries[Only_EU_Countries$Country %in% Big_user_200country, ]
+  EU_big_users200_cleaned<-Only_EU_Countries[Only_EU_Countries$Country %in% Big_user_200country, ]
 
   #Free scale plotting >200 tonnes buyers
-CountryPlot(EU_big_users200_cleaned, "free")
+  CountryPlot(EU_big_users200_cleaned, "free")
 
   #Fixed scale
-CountryPlot(EU_big_users200_cleaned, "fixed")
+  CountryPlot(EU_big_users200_cleaned, "fixed")
 
 #Determining Top buyers (>300 tonnes of antibiotics)
 Big_user300 <- filter(Only_EU_Countries, `Antibiotic sales (tonnes)` > 300)
@@ -91,10 +91,10 @@ Big_user_300country <- unique(Big_user300$Country)
 Big_user_300country
 
   #Indexing for Top 8 Buyers data
-EU_big_users300_cleaned<-Only_EU_Countries[Only_EU_Countries$Country %in% Big_user_300country, ]
+  EU_big_users300_cleaned<-Only_EU_Countries[Only_EU_Countries$Country %in% Big_user_300country, ]
 
   #Plotting Top 8 buyers, free scale
-CountryPlot(EU_big_users300_cleaned, "free")
+  CountryPlot(EU_big_users300_cleaned, "free")
 
   #Plotting Top 8 buyers, fixed scale
-CountryPlot(EU_big_users300_cleaned, "fixed")
+  CountryPlot(EU_big_users300_cleaned, "fixed")
