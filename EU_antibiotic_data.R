@@ -18,7 +18,7 @@ library(ggplot2)
 library(ggforce)
 library(readr)
 
-EU_antimicrobial_livestock_use_country_ <- read_csv("Documents/Job search/EU_antimicrobial_livestock_use_country_ Updated.csv")
+EU_antimicrobial_livestock_use_country_ <- read_csv("EU_antimicrobial_livestock_use_country_ Updated.csv")
 
 #Initial Observation of data
 View(EU_antimicrobial_livestock_use_country_)
