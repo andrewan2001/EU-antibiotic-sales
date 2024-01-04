@@ -6,5 +6,5 @@ with less feed costs. The European countries have monitored antibiotic sale
 since 2010 to better understand this issue. The following analysis is based on
 the European Medicines Agency's European Surveillance of Veterinary Antimicrobial 
 Consumption database (ESVAC) and captures sale data from 2010 - 2021. The following 
-visualizes total antibiotic sale for livestock in European countries and determine 
-if there have been significant reductions to antibiotic sale in the past decade. 
+visualizes total antibiotic sale for livestock in all and top 8 highest using European countries 
+and determine if there have been significant reductions to antibiotic sale in the past decade.
